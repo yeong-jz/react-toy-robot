@@ -3,7 +3,7 @@ FROM node:16.13.0-alpine
 
 # set working directory
 WORKDIR /app
-RUN LS
+RUN ls
 
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
