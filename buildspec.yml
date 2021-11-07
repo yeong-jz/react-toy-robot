@@ -13,9 +13,9 @@ phases:
   build:
     commands:
       - echo build Docker image on `date`
-      - docker build -t 705076103456.dkr.ecr.us-east-1.amazonaws.com/toy-robot:latest .
+      - docker build -t 208157287953.dkr.ecr.us-east-1.amazonaws.com/toy-robot:latest .
   post_build:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
-      - docker push 705076103456.dkr.ecr.us-east-1.amazonaws.com/toy-robot:latest
+      - docker push 208157287953.dkr.ecr.us-east-1.amazonaws.com/toy-robot:latest
