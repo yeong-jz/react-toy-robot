@@ -9,7 +9,8 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json ./
-RUN npm install
+RUN npm uninstall react-scripts --save
+RUN npm i react-scripts
 RUN yarn
 
 # add app
