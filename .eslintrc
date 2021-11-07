@@ -27,16 +27,16 @@
     }
   },
   "rules": {
-    "import/no-unresolved": "error",
-    "import/order": "error",
+    "import/no-unresolved": "warn",
+    "import/order": "warn",
     "import/named": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-explicit-any": ["off"],
     "@typescript-eslint/explicit-member-accessibility": "off",
-    "@typescript-eslint/no-empty-interface": ["error", {
+    "@typescript-eslint/no-empty-interface": ["warn", {
       "allowSingleExtends": true
     }],
-    "prettier/prettier": ["error", {
+    "prettier/prettier": ["warn", {
       "singleQuote": true,
       "printWidth": 100,
       "semi": true
