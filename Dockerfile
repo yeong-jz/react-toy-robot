@@ -9,6 +9,7 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json ./
+RUN npm update -g typescript
 RUN yarn
 
 # add app
