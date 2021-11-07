@@ -3,19 +3,17 @@ FROM node:16.13.0-alpine
 
 # set working directory
 WORKDIR /app
-RUN ls
 
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
-COPY package.json ./
-RUN npm uninstall react-scripts --save
-RUN npm i react-scripts
+COPY package.json yarn.lock ./
 RUN yarn
 
 # add app
 COPY . ./
+
 
 # start app
 CMD ["yarn", "start"]
