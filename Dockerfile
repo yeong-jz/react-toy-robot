@@ -16,4 +16,4 @@ RUN yarn
 COPY . ./
 
 # start app
-CMD ["yarn", "build"]
+CMD ["yarn", "start"]
