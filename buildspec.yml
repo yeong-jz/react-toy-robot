@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  variables:
+    ACCOUNT_ID: ACCOUNT_ID
+    key: "value"
 phases:
   install:
     runtime-versions:
@@ -13,9 +17,9 @@ phases:
   build:
     commands:
       - echo build Docker image on `date`
-      - docker build -t 208157287953.dkr.ecr.us-east-1.amazonaws.com/toy-robot:latest .
+      - docker build -t $ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/toy-robot:latest .
   post_build:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
-      - docker push 208157287953.dkr.ecr.us-east-1.amazonaws.com/toy-robot:latest
+      - docker push $ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/toy-robot:latest
