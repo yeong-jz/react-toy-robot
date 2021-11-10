@@ -25,5 +25,5 @@ phases:
       - docker push $ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/toy-robot:latest
       - printf '[{"name":"toy-robot","imageUri":$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/toy-robot:latest}]' > imagedefinitions.json
 
-  artifacts:
-    files: imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json
